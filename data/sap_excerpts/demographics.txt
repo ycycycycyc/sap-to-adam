@@ -1,0 +1,18 @@
+Section 6.3 Demographic and Baseline Characteristics
+
+Age (AGE) will be taken from the Demographics (DM) domain variable AGE and
+reported in years. If AGE is missing in DM, age will be derived as the integer
+number of years between date of birth (BRTHDTC) and informed consent date
+(RFICDTC), using the year-month-day convention specified in the SAP shell.
+
+Sex (SEX) will be copied from the Demographics (DM) domain variable SEX.
+
+Race (RACE) will be copied from the Demographics (DM) domain variable RACE.
+If multiple races are collected, RACE will be set to "MULTIPLE" and the
+individual race selections will remain traceable to the supplemental
+demographics domain.
+
+Baseline weight (BASEWT) will be derived from the Vital Signs (VS) domain as
+the last non-missing VSSTRESN value where VSTESTCD = "WEIGHT" and VSDTC is on
+or before treatment start date (TRTSDT). If no qualifying pre-treatment weight
+record is available, BASEWT will be set to missing.

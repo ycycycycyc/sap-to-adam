@@ -1,0 +1,19 @@
+Section 5.1 Analysis Populations
+
+The Safety Population flag (SAFFL) will be set to "Y" for all randomized
+subjects who received at least one dose of study drug. Receipt of study drug
+will be determined from the Exposure (EX) domain, where a subject has at least
+one exposure record with EXDOSE > 0. Subjects who were randomized but never
+received study drug will have SAFFL set to "N".
+
+The Intent-to-Treat Population flag (ITTFL) will be set to "Y" for all
+randomized subjects, regardless of whether study drug was received. Randomized
+status will be determined from the Randomization (RS) domain using the
+randomization date variable RSDTC. Subjects without evidence of randomization
+will have ITTFL set to "N".
+
+The Per-Protocol Population flag (PPROTFL) will be set to "Y" for all
+randomized subjects who received at least one dose of study drug and had no
+major protocol deviations impacting efficacy analyses. Major protocol
+deviations will be identified from the Protocol Deviations (DV) domain where
+DVCAT = "MAJOR" and DVDECOD indicates an efficacy-impacting deviation.

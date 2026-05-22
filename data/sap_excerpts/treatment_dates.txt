@@ -1,0 +1,18 @@
+Section 7.2.1 Treatment Start and End Dates
+
+Treatment start date (TRTSDT) will be derived as the date of first
+study drug administration as recorded in the Exposure (EX) domain.
+Specifically, TRTSDT is defined as the minimum EXSTDTC value across
+all exposure records for a given subject where EXDOSE > 0. If a
+subject was randomized but never received study drug, TRTSDT will
+be set to missing.
+
+Treatment end date (TRTEDT) will be derived as the date of last
+study drug administration plus one day (to reflect the end of the
+dosing interval), based on the maximum EXENDTC value across all
+exposure records where EXDOSE > 0. For subjects who discontinued
+prematurely, TRTEDT will reflect the last actual dose taken, not
+the planned end of treatment.
+
+Both dates will be presented in ISO 8601 numeric format (YYYY-MM-DD)
+as SAS dates.
